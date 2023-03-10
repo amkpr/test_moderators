@@ -1,12 +1,11 @@
 import streamlit as st
 from glob import glob
 import numpy as np
-import os
     
 labels = ['HF', 'LF_ln', 'LF_noln', 'drone', 'car', 'animals', 'wind']
 how_many_files = [1, 0, 2, 2, 10, 3, 5, 0]
 
-all_files = sorted(glob(os.path.dirname(os.path.realpath(__file__))+'/**/*.wav', recursive = True))
+all_files = sorted(glob('./**/*.wav', recursive = True))
 
 
 def find_label(filename):
